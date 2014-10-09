@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-#	Bachelor of Science Thesis				2o11/2o12
+#	Bachelor of Science Thesis				2011 - 2015
 #	Author:									Wojciech Gawroński
 #
 #	Grammar Generator for internal searching language.
-#	Main test suite.
+#	Main test runner.
 
 import os
 import fnmatch
@@ -53,9 +53,9 @@ class TestRunner:
 	def buildTestSuite(self):
 		testFilesList = self.buildTestFilesList()
 		classNames = self.buildClassNamesList(testFilesList)
-		
+
 		return unittest.TestSuite([ self.loadTestCase(className) for className in classNames ])
-	
+
 	# Run test runner for command line.
 	def runTextTestRunner(self):
 		unittest.TextTestRunner().run(self.buildTestSuite())
