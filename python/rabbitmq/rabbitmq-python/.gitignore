@@ -1,5 +1,2 @@
-# Client:
-rabbitmq-client/
-
 # Binaries.
 */*.pyc
